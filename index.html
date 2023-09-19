@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Feed</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/70df8cc257.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" class="css">
+</head>
+<body>
+
+    <!-- navbar header -->
+
+    <div class="container-fluid">
+        <nav class="navbar bg-light">
+                <a class="navbar-brand text-dark"><i class="fa-brands fa-instagram fa-2xl" style="color: #000000;"></i> Instagram</a>
+                <div class="d-flex">
+                    <button type="button" class="btn btn-success me-2 justify-content-end" data-bs-toggle="modal" data-bs-target="#newPost">
+                        Create a new post
+                    </button>
+                    <div class="modal" id="newPost">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h4 class="modal-title">Create a new post</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Caption:</p>
+                                    <textarea class="form-control" id="postComment" rows="3" placeholder="Add the caption of your post here"></textarea>
+                                    <br>
+                                    <button type="button" class="btn btn-light me-1"><i class="fa-solid fa-camera fa-lg" style="color: #000000;"></i></button>
+                                    <button type="button" class="btn btn-light"><i class="fa-solid fa-location-dot fa-lg" style="color: #000000;"></i></button>
+                                </div>
+                                <div class="modal-footer justify-content-end">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success">Publish</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <button class="dropdown-item" type="button">Profile</button>
+                            <button class="dropdown-item" type="button">Accessibility</button>
+                            <button class="dropdown-item" type="button">Privacy and Data</button>
+                            <li><hr class="dropdown-divider"></li>
+                            <button class="dropdown-item text-danger" type="button">Log out</button>
+                        </div>
+                    </div>
+                </div>
+        </nav>      
+    </div>
+
+    <!-- view navbar -->
+
+    <div class="container-fluid">
+        <ul class="nav nav-tabs justify-content-center border-0" id="myTab" role="tablist">
+
+            <li class="nav-item" role="presentation">
+            <button class="nav-link active border-0" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid-tab-pane" type="button" role="tab" aria-controls="grid-tab-pane" aria-selected="true">
+                <i class="fa-solid fa-table-cells fa-lg"></i>
+            </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+            <button class="nav-link border-0" id="feed-tab" data-bs-toggle="tab" data-bs-target="#feed-tab-pane" type="button" role="tab" aria-controls="feed-tab-pane" aria-selected="false">
+                <i class="fa-solid fa-square fa-lg"></i>
+            </button>
+            </li>
+
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="grid-tab-pane" role="tabpanel" aria-labelledby="grid-tab" tabindex="0">
+
+                            <!-- content grid -->
+
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-4 my-3">
+                            <img class="img-fluid rounded" src="dog01sq.jpg">
+                        </div>
+                        <div class="col-4 my-3">
+                            <img class="img-fluid rounded" src="dog02sq.jpg">
+                        </div>
+                        <div class="col-4 my-3">
+                            <img class="img-fluid rounded" src="dog03sq.jpg">
+                        </div>
+                        <div class="col-4 my-3">
+                            <img class="img-fluid rounded" src="dog04sq.jpg">
+                        </div>
+                        <div class="col-4 my-3">
+                            <img class="img-fluid rounded" src="dog05sq.jpg">
+                        </div>
+                        <div class="col-4 my-3">
+                            <img class="img-fluid rounded" src="dog06sq.jpg">
+                        </div>
+                        <div class="col-4 my-3">
+                            <img class="img-fluid rounded" src="dog07sq.jpg">
+                        </div>
+                        <div class="col-4 my-3">
+                            <img class="img-fluid rounded" src="dog08sq.jpg">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="feed-tab-pane" role="tabpanel" aria-labelledby="feed-tab" tabindex="0">
+
+                            <!-- content feed -->
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 p-3 justify-content-center m-auto">
+                            
+                            <div class="card mb-5">
+                                <div class="d-flex justify-content-between text-center m-3">
+                                    <div><h3 class="card-title">Cute dog #01</h3></div>
+                                    <div><p class="text-body-secondary">09/15</p></div>
+                                </div>
+                                <img src="dog01.jpg" alt="photo">
+                                <div class="card-body">
+                                    <h5 class="card-subtitle">240 Likes</h5>
+                                    <p class="card-text">This is an example of a very good photo that you can post on Instagram. It's a cute dog, but it could be anything.</p>
+                                </div>
+                            </div>
+
+                            <div class="card mb-5">
+                                <div class="d-flex justify-content-between text-center m-3">
+                                    <div><h3 class="card-title">Cute dog #02</h3></div>
+                                    <div><p class="text-body-secondary">09/13</p></div>
+                                </div>
+                                <img src="dog02.jpg" alt="photo">
+                                <div class="card-body">
+                                    <h5 class="card-subtitle">250 Likes</h5>
+                                    <p class="card-text">This is an example of a very good photo that you can post on Instagram. It's a cute dog, but it could be anything.</p>
+                                </div>
+                            </div>
+
+                            <div class="card mb-5">
+                                <div class="d-flex justify-content-between text-center m-3">
+                                    <div><h3 class="card-title">Cute dog #03</h3></div>
+                                    <div><p class="text-body-secondary">09/12</p></div>
+                                </div>
+                                <img src="dog03.jpg" alt="photo">
+                                <div class="card-body">
+                                    <h5 class="card-subtitle">247 Likes</h5>
+                                    <p class="card-text">This is an example of a very good photo that you can post on Instagram. It's a cute dog, but it could be anything.</p>
+                                </div>
+                            </div>
+
+                            <div class="card mb-5">
+                                <div class="d-flex justify-content-between text-center m-3">
+                                    <div><h3 class="card-title">Cute dog #04</h3></div>
+                                    <div><p class="text-body-secondary">09/05</p></div>
+                                </div>
+                                <img src="dog04.jpg" alt="photo">
+                                <div class="card-body">
+                                    <h5 class="card-subtitle">240 Likes</h5>
+                                    <p class="card-text">This is an example of a very good photo that you can post on Instagram. It's a cute dog, but it could be anything.</p>
+                                </div>
+                            </div>
+
+                            <div class="card mb-5">
+                                <div class="d-flex justify-content-between text-center m-3">
+                                    <div><h3 class="card-title">Cute dog #05</h3></div>
+                                    <div><p class="text-body-secondary">09/01</p></div>
+                                </div>
+                                <img src="dog05.jpg" alt="photo">
+                                <div class="card-body">
+                                    <h5 class="card-subtitle">300 Likes</h5>
+                                    <p class="card-text">This is an example of a very good photo that you can post on Instagram. It's a cute dog, but it could be anything.</p>
+                                </div>
+                            </div>
+
+                            <div class="card mb-5">
+                                <div class="d-flex justify-content-between text-center m-3">
+                                    <div><h3 class="card-title">Cute dog #06</h3></div>
+                                    <div><p class="text-body-secondary">08/29</p></div>
+                                </div>
+                                <img src="dog06.jpg" alt="photo">
+                                <div class="card-body">
+                                    <h5 class="card-subtitle">560 Likes</h5>
+                                    <p class="card-text">This is an example of a very good photo that you can post on Instagram. It's a cute dog, but it could be anything.</p>
+                                </div>
+                            </div>
+
+                            <div class="card mb-5">
+                                <div class="d-flex justify-content-between text-center m-3">
+                                    <div><h3 class="card-title">Cute dog #07</h3></div>
+                                    <div><p class="text-body-secondary">08/26</p></div>
+                                </div>
+                                <img src="dog07.jpg" alt="photo">
+                                <div class="card-body">
+                                    <h5 class="card-subtitle">320 Likes</h5>
+                                    <p class="card-text">This is an example of a very good photo that you can post on Instagram. It's a cute dog, but it could be anything.</p>
+                                </div>
+                            </div>
+
+                            <div class="card mb-5">
+                                <div class="d-flex justify-content-between text-center m-3">
+                                    <div><h3 class="card-title">Cute dog #08</h3></div>
+                                    <div><p class="text-body-secondary">08/25</p></div>
+                                </div>
+                                <img src="dog08.jpg" alt="photo">
+                                <div class="card-body">
+                                    <h5 class="card-subtitle">112 Likes</h5>
+                                    <p class="card-text">This is an example of a very good photo that you can post on Instagram. It's a cute dog, but it could be anything.</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+</body>
+</html>
